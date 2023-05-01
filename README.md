@@ -7,4 +7,7 @@
 เรียนรู้การสร้าง spring boot
 1. <a href="#"> spring boot crud with mariadb </a>
 2. <a href="#"> sprint boot crud with microsoft sql server </a>
+3. <a href="#"> spring boot pagenation + bootstrap + mariadb </a>
+4. <a href="#"> spring boot pagenation + bootstrap + microsoft sql server  </a>
+5. <a href="#"> spring boot Data JPA + mariadb  </a>
 
