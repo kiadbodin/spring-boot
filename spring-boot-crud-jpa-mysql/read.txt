@@ -1,0 +1,16 @@
+install
+1. Create project pass https://start.spring.io/
+2. import project into eclise 
+3. config application.properties
+4. create table in database 
+
+วิธีทำไฟล์ install run project
+Step by Step
+สร้างฐานข้อมูลและแก้ไขรหัสผ่านใน mysql ให้เรียบร้อย
+
+1. cmd in Floder ที่แก้ Project
+2.  ใช้คำสั่งผ่าน command Line
+	->mvnw clean
+	->mvnw install
+	->java -jar target/springbootcrudmysql-0.0.1-SNAPSHOT.jar
+3. เข้า browser http://localhost:8080/ 

@@ -1,0 +1,16 @@
+Git คือ Version Control ที่ใช้ในการพัฒนา Software ช่วยเก็บรักษาไฟล์ สามารถติดตามการเปลี่ยนแปลงของไฟล์ได้ รวมทั้งสามารถย้อนกลับไปยัง Version ต่างๆได้
+
+การใช้งานคำสั่งพื้นฐาน Git ที่ใช้งานกันบ่อยๆ บน Terminal
+
+git status คือ แสดงไฟล์ที่มีการเปลี่ยนแปลง หรือยังต้องการ add หรือ commit
+git add . คือ การเพิ่มไฟล์เป็นสถานะ stage
+git reset คือ การ unstage ไฟล์ที่เราเคย stage
+git commit คือการ commit ไฟล์ที่ stage โดยมักจะใช้  git commit -m เพื่อเพิ่มข้อความในสิ่งที่ทำไป
+git log คือการดุประวัติที่เคย commit ไว้
+git pull คือการ remote ไฟล์มายัง local โดยคำสั่ง git pull นั้นจะทำการ git fetch และ git merge ไปด้วย โดยเราจะมักเห็นใช้ git pull –rebase เพื่อทำการเปลี่ยนฐานแทนการ merge
+git merge (branch) คือการรวม branch ที่เจาะจงมายัง local
+git fetch คือ การตรวจสอบไฟล์ภายใน local และ remote ว่าตรงกันหรือไม่
+git push คือ ส่งการเปลี่ยนแปลงของไฟล์ไปบน remote repository
+git stash คือ การเก็บซ่อนการเปลี่ยนแปลงทั้งหมดไว้ทั้งหมด และสามารถนำกลับมาโดยใช้ git stash pop
+git checkout (branch) คือ การเปลี่ยน branch
+git clone (url) คือการ คัดลอกโปรเจคจาก remote มายัง local

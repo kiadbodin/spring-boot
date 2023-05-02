@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+	    <title> รายการสินค้า </title>
+	   <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+	  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" >
+	  
+	  <style type="text/css">
+	  	body{
+	  		font-family: 'Sarabun', sans-serif;
+	  	}
+	  </style>
+  </head>
+
+  <body>
+  		<div class="container mt-5">
+  		<h2 class="text-center">  แก้ไขรายการสินค้า </h2>
+  		<hr>
+  		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item"><a th:href="@{/}">หน้ารายการสินค้า </a></li>
+		    <li class="breadcrumb-item"><a href="#"> แก้ไขข้อมูล </a></li>
+		    
+		  </ol>
+		 </nav> 
+  		<form th:action="@{/product/formedit/Update}"  th:object="${product}" method="post" name="product"  >
+  		
+  		<th:block th:each="resultdata:${optionalproductid}">
+  		<input type="hidden" name="productid" th:value="${resultdata.productid}" > 
+  			 <div class="mb-3 row">
+			    <label for="staticEmail" class="col-sm-2 col-form-label"> ชื่อสินค้า </label>
+			    <div class="col-sm-10">
+			      <input type="text"  name="productname"  class="form-control" id="productname"  th:value="${resultdata.productname}" >
+			    </div>
+			  </div>
+			  
+			  <div class="mb-3 row">
+			    <label for="inputPassword" class="col-sm-2 col-form-label"> ยี่ห้อ </label>
+			    <div class="col-sm-10">
+			     <select class="form-select"    name="productbrand"  id="productbrand">	
+				  <option th:selected="${resultdata.productbrand} == 'Apple' "  value="Apple" > Apple</option>
+				   <option th:selected="${resultdata.productbrand} == 'samsung' "   value="samsung"> samsung</option>
+				   <option th:selected="${resultdata.productbrand} == 'huawei' "   value="huawei"> huawei</option>				   
+				  <option  th:selected="${resultdata.productbrand} == 'oppo' "   value="oppo"> oppo</option>
+				  <option  th:selected="${resultdata.productbrand} == 'Realmi' "  value="Realmi"> Realmi </option>
+				  <option  th:selected="${resultdata.productbrand} == 'Nokia' "  value="Nokia"> Nokia </option>
+				  <option  th:selected="${resultdata.productbrand} == 'Vivo' "  value="Vivo" > Vivo </option>
+
+				</select>
+			    </div>
+			  </div>
+			  
+			  <div class="mb-3 row">
+			    <label for="inputPassword" class="col-sm-2 col-form-label"> ราคา </label>
+			    <div class="col-sm-10">
+			      <input type="text" name="productprice" class="form-control" th:value="${resultdata.productprice}"  id="productprice">
+			    </div>
+			  </div>
+			    <div class="mb-3 row">
+			    <label for="inputPassword" class="col-sm-2 col-form-label">  </label>
+			    <div class="col-sm-10">
+			      <input type="submit"  class="form-control btn btn-success" value="บันทึก" >
+			    </div>
+			  </div>
+			  </th:block>
+			  </form>
+		</div>
+    
+  
+  </body>
+
+</html>
