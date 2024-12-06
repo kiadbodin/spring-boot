@@ -91,18 +91,23 @@
 		    <artifactId>core</artifactId>
 		</dependency>
 		
-	
-			<!-- https://mvnrepository.com/artifact/io.nayuki/qrcodegen -->
+		<!-- https://mvnrepository.com/artifact/io.nayuki/qrcodegen -->
 		<dependency>
 		    <groupId>io.nayuki</groupId>
 		    <artifactId>qrcodegen</artifactId>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/uk.org.okapibarcode/okapibarcode -->
-<dependency>
-    <groupId>uk.org.okapibarcode</groupId>
-    <artifactId>okapibarcode</artifactId>
-</dependency>
+		<dependency>
+		    <groupId>uk.org.okapibarcode</groupId>
+		    <artifactId>okapibarcode</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		    <version>2.5.0</version>
+		</dependency>
 
 	</dependencies>
 
