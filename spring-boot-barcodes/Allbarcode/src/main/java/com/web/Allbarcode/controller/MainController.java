@@ -52,6 +52,7 @@ public class MainController {
 
         mav.addObject("medium",medium);
         mav.addObject("github",github);
+        
         mav.addObject("qrcode",qrcode);
         
 		return mav;
